@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://ck3belw8dfyao"]
+
+[ext_resource type="Texture2D" uid="uid://btvjbhcuoqd5d" path="res://fish game resources/sea.jpg" id="1_x5tne"]
+[ext_resource type="Texture2D" uid="uid://5w313r2tfyu" path="res://fish game resources/goldfish.png" id="2_146bi"]
+[ext_resource type="Script" path="res://Goldfish.gd" id="3_evtky"]
+[ext_resource type="Texture2D" uid="uid://dlrtm1mua6qpu" path="res://fish game resources/shark.png" id="4_p80to"]
+[ext_resource type="Script" path="res://Shark.gd" id="5_0mmdu"]
+
+[node name="Main" type="Node2D"]
+
+[node name="world" type="Node2D" parent="."]
+
+[node name="Sea" type="Sprite2D" parent="world"]
+position = Vector2(577.5, 323)
+scale = Vector2(2.13148, 1.8)
+texture = ExtResource("1_x5tne")
+
+[node name="Sea2" type="Sprite2D" parent="world"]
+position = Vector2(1728, 323)
+scale = Vector2(2.13148, 1.8)
+texture = ExtResource("1_x5tne")
+
+[node name="Sea3" type="Sprite2D" parent="world"]
+position = Vector2(2878, 325)
+scale = Vector2(2.13148, 1.8)
+texture = ExtResource("1_x5tne")
+
+[node name="Goldfish" type="Sprite2D" parent="."]
+position = Vector2(405, 342)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_146bi")
+script = ExtResource("3_evtky")
+
+[node name="Camera2D" type="Camera2D" parent="Goldfish"]
+zoom = Vector2(1.2, 1.2)
+limit_left = 0
+limit_top = 0
+limit_right = 3450
+limit_bottom = 645
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="Shark" type="Sprite2D" parent="."]
+position = Vector2(554, 345)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_p80to")
+script = ExtResource("5_0mmdu")
